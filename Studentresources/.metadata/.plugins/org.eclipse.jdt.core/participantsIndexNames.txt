@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\javamini\Studentresources\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3831685073.index
+\StudentResources\src
