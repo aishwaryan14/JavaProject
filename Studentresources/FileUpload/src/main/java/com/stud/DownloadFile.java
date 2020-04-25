@@ -3,6 +3,7 @@ package com.stud;
 import java.io.File;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +14,7 @@ import java.sql.Statement;
 
 public class DownloadFile {
 
-	public static void main(String[] args) throws Exception {
+	public void downloa() throws IOException {
 
 		Connection myConn = null;
 		Statement myStmt = null;
@@ -25,7 +26,7 @@ public class DownloadFile {
 		try {
 			// 1. Get a connection to database
 			myConn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/files", "root", "mysql");
+					"jdbc:mysql://localhost:3306/files", "root", "root");
 
 			// 2. Execute statement
 			myStmt = myConn.createStatement();

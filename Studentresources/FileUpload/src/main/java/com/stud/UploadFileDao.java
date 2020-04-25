@@ -10,7 +10,7 @@ public class UploadFileDao {
 
     private static final String url = "jdbc:mysql://localhost:3306/files?useSSL=false";
     private static final String user = "root";
-    private static final String password = "mysql";
+    private static final String password = "root";
 
     private static final String sql = "INSERT INTO file (file) values (?)";
 

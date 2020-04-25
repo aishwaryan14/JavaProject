@@ -13,8 +13,28 @@
   	<description></description>
   	<servlet-class>com.stud.DownloadFile</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>fileDownloadSer</servlet-name>
+  	<display-name>fileDownloadSer</display-name>
+  	<description></description>
+  	<servlet-class>com.stud.fileDownloadSer</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>filedownloadser</servlet-name>
+  	<display-name>filedownloadser</display-name>
+  	<description></description>
+  	<servlet-class>com.stud.filedownloadser</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>DownloadFile</servlet-name>
   	<url-pattern>/DownloadFile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>fileDownloadSer</servlet-name>
+  	<url-pattern>/fileDownloadSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>filedownloadser</servlet-name>
+  	<url-pattern>/filedownloadser</url-pattern>
   </servlet-mapping>
 </web-app>

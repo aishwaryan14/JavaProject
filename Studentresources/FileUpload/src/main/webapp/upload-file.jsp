@@ -18,7 +18,7 @@
   <h1 class="text-center">File Upload to Database Example - Servlet JSP JDBC MySQL </h1>
   <div class="card">
    <div class="card-body">
-    <form method="post" class="form-group" action="Fileupl"
+    <form method="get" class="form-group" action="test"
      enctype="multipart/form-data">
      <div class="form-group">
       <label for="uploaded file">Upload file:</label> <input
@@ -29,5 +29,8 @@
    </div>
   </div>
  </div>
+ 
+ 
+ <button ></button>
 </body>
 </html>
