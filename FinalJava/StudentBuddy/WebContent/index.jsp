@@ -41,8 +41,8 @@
  <sql:setDataSource
         var="myDS"
         driver="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost:3306/java_demo"
-        user="root" password="root"
+        url="jdbc:mysql://localhost:3306/finaldb"
+        user="root" password="mysql"
     />
      
     <sql:query var="listUsers"   dataSource="${myDS}">
