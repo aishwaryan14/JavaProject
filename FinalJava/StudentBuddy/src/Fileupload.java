@@ -58,14 +58,20 @@ public class Fileupload extends HttpServlet {
 //		ServletFileUpload sf = new ServletFileUpload(new DiskFileItemFactory());
 		try {
 			Part item = request.getPart("file");
+			String department1 = request.getParameter("department");
+			String semester1 = request.getParameter("semester");
+			String subject1 = request.getParameter("subject");
 			String description1 = request.getParameter("description");
+			System.out.println(department1);
+			System.out.println(semester1);
+			System.out.println(subject1);
 			System.out.println(description1);
 			if(item!=null) {
 			
 //				item.write(new File("C:\\Users\\Ujwal\\eclipse-workspace\\servlet\\StudentBuddy\\"+item.getName()));
 			inputStream = item.getInputStream();
 			
-			int row = fileUploadDao.uploadFile(inputStream,description1);
+			int row = fileUploadDao.uploadFile(inputStream,department1,semester1,subject1,description1);
 			if (row>0) {
 				message = "file uploaded and saved to database";
 			}

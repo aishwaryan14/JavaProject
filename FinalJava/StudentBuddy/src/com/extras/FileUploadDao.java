@@ -8,17 +8,20 @@ import java.sql.SQLException;
 
 public class FileUploadDao {
 
-    private static final String url = "jdbc:mysql://localhost:3306/java_demo?useSSL=false";
+    private static final String url = "jdbc:mysql://localhost:3306/finaldb?useSSL=false";
     private static final String user = "root";
-    private static final String password = "root";
-    String department1 = "ISE";
-    String semester1 = "5th";
-    String subject1 = "J2EE";
+    private static final String password = "mysql";
+    String department1 = "";
+    String semester1 = "";
+    String subject1 = "";
     String description1="";
     
     private static final String sql = "INSERT INTO final (department,semester,subject,description,file) values (?, ?, ?,?,?)";
-    public int uploadFile(InputStream file,String description) {
+    public int uploadFile(InputStream file,String department,String semester,String subject,String description) {
         int row = 0;
+        department1 = department;
+        semester1 = semester;
+        subject1 = subject;
         description1 = description;
         try {
             Class.forName("com.mysql.jdbc.Driver");

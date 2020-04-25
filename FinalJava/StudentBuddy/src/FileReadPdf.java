@@ -51,7 +51,7 @@ public class FileReadPdf extends HttpServlet {
  
            try {
                Class.forName("com.mysql.jdbc.Driver");
-               con = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_demo","root","root");
+               con = DriverManager.getConnection("jdbc:mysql://localhost:3306/finaldb","root","mysql");
           } catch (Exception e) {
                      System.out.println(e);
                      System.exit(0); 
