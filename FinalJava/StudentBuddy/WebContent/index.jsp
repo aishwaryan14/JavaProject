@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>J2EE</title>
+<title>UPLOAD</title>
 <link
  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
  rel="stylesheet"
@@ -17,7 +17,7 @@
 <body>
 
  <div class="container col-lg-6">
-  <h1 class="text-center">J2EE</h1>
+  <h1 class="text-center">UPLOAD</h1>
   <div class="card">
    <div class="card-body">
     <form method="post" class="form-group" action="Fileupload"
@@ -26,8 +26,14 @@
       <label for="uploaded file">Upload file:</label>
        <input
        type="file" name="file" size="50" />
-       <label>Description</label>
-       <input type="text" name="description"/>
+       <div><label>Department</label>
+       <input type="text" name="department"/></div>
+       <div><label>Semester</label>
+       <input type="text" name="semester"/></div>
+       <div><label>Subject</label>
+       <input type="text" name="subject"/></div>
+       <div><label>Description</label>
+       <input type="text" name="description"/></div>
      </div>
    
      <input type="submit" value="Save" class="btn btn-success">
@@ -37,7 +43,7 @@
  </div>
 
 
-
+<!-- 
  <sql:setDataSource
         var="myDS"
         driver="com.mysql.jdbc.Driver"
@@ -74,7 +80,7 @@
         </table>
     </div>
 
-
+-->
  
 </body>
 </html>

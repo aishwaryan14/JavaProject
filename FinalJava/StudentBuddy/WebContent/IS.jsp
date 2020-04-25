@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>J2EE</title>
+<title>ISE</title>
 <link
  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
  rel="stylesheet"
@@ -17,7 +17,7 @@
 <body>
 
  <div class="container col-lg-6">
-  <h1 class="text-center">J2EE</h1>
+  <h1 class="text-center">ISE</h1>
   <div class="card">
    <div class="card-body">
     <form method="get" class="form-group" action="IS.jsp">
