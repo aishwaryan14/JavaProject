@@ -8,7 +8,7 @@
 </head>
 <body>
 <a href="ISE.jsp">Information Science and Engineering</a>
-<a href="CSE.jsp">Computer Scinece and Engineering</a>
+<a href="CSE.jsp">Computer Science and Engineering</a>
 <a href="Mechanical.jsp">Mechanical Engineering</a>
 
 </body>
