@@ -45,9 +45,27 @@
       					<label for="uploaded file">Upload file:</label>
        					<input type="file" name="file" size="50" />
        					<div><label>Department</label>
-       					<input type="text" name="department"/></div>
+       					<select class="browser-default custom-select" name="department">
+  		 					<option selected>Choose department</option>
+  		 					<option value="ISE">ISE</option>
+  		 					<option value="CSE">CSE</option>
+  		 					<option value="ECE">ECE</option>
+  		 					<option value="TCE">TCE</option>
+  		 					<option value="MECH">MECH</option>
+  		 					<option value="BIOTECH">BIOTECH</option>
+  						</select>
        					<div><label>Semester</label>
-       					<input type="text" name="semester"/></div>
+       					<select class="browser-default custom-select" name="semester">
+  		 					<option selected>Choose semester</option>
+	 						<option value="1">1</option>
+  		 					<option value="2">2</option>
+  		 					<option value="3">3</option>
+  		 					<option value="4">4</option>
+  		 					<option value="5">5</option>
+  		 					<option value="6">6</option>
+  		 					<option value="7">7</option>
+  		 					<option value="8">8</option>
+	    				</select></div>
        					<div><label>Subject</label>
        					<input type="text" name="subject"/></div>
        					<div><label>Description</label>

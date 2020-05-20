@@ -8,6 +8,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>ISE</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+
 <link
  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
  rel="stylesheet"
@@ -69,11 +79,29 @@
      <div class="form-group">
      <div>
        <label>Subject</label>
-       <input type="text" name="subject"/>
+       <select class="browser-default custom-select" name="subject">
+  		 <option selected>Choose subject</option>
+  		 <option value="J2EE">J2EE</option>
+  		 <option value="JAVA">JAVA</option>
+  		 <option value="OOADP">OOADP</option>
+  		 <option value="ML">ML</option>
+  		 <option value="IPR">IPR</option>
+  		 <option value="OS">OS</option>
+  		</select>
      </div>
      <div>  
        <label>Semester</label>
-       <input type="text" name="semester"/>
+        <select class="browser-default custom-select" name="semester">
+  		 <option selected>Choose semester</option>
+  		 <option value="1">1</option>
+  		 <option value="2">2</option>
+  		 <option value="3">3</option>
+  		 <option value="4">4</option>
+  		 <option value="5">5</option>
+  		 <option value="6">6</option>
+  		 <option value="7">7</option>
+  		 <option value="8">8</option>
+	    </select>
      </div>
      </div>
      <input type="submit" value="Submit" class="btn btn-success">

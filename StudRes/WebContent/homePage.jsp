@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>  
 <!DOCTYPE>
-<html>
+<html> 
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -131,109 +131,87 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<section class="wel-area wel-area-15" style="margin-top: 90px;">
+<section style="background:#2B2C40;padding: 60px 0;
+text-align: center;">
 
-			<div class="container">
 
-				<div class="row">
-
-					<div class="col-md-12 col-sm-12 col-xs-12">
-
-						<div class="widget wel-service-1-widget">
-
-							<div class="widget-title widget-title-s5 text-center">
-								<span></span>
-								<h2>OUR BEST FEATURES</h2>
-								<p>We are constantly improvising</p>
-							</div>
-							<!-- widget-title -->
-
-							<div class="widget-content">
-
-								<div class="row">
-
-									<div class="col-md-4 col-sm-4 col-xs-12">
-										<span class="boxy-title"> <i class="fa fa-flag-checkered pull-left" style="background-color: #F9A61A; width: 100%;"> <a href="#" style="padding: 12px; font: italic normal normal normal 28px/21px georgia;">Top
-													Ranked</a>
-										</i>
-										</span>
-										<article class="entry-item clearfix">
-
-											<div class="entry-content">
-
-												<p class="boxy-content">We are ranked No. 64 among the
-													top 100 Engineering Institutions across the country as per
-													MHRD, Govt. of India, 2019</p>
-												<a class="more-link clearfix" href="#" style="display: none">
-													<span class="pull-left">Read more</span> <i class="fa fa-angle-right pull-left"></i>
-												</a>
-											</div>
-										</article>
-									</div>
-									<!-- col-md-4 -->
-
-									<div class="col-md-4 col-sm-4 col-xs-12">
-
-										<article class="entry-item clearfix">
-											<span class="boxy-title"> <i class="fa fa-mortar-board pull-left" style="background-color: #e46a16; width: 100%;"> <a href="#" style="padding: 12px; font: italic normal normal normal 28px/21px georgia;">Industry
-														Collaborations</a>
-											</i>
-											</span>
-											<!--i class="fa fa-mortar-board pull-left" style="background-color: #e46a16"></i-->
-											<div class="entry-content">
-
-												<p class="boxy-content">
-													We are collaborated with 46 Industries so far. <br> We
-													have an average of 350 Publications per year. <br> We
-													have an average of 96% Placement Percentage.
-												</p>
-												<a class="more-link clearfix" href="#" style="display: none">
-													<span class="pull-left">Read more</span> <i class="fa fa-angle-right pull-left"></i>
-												</a>
-											</div>
-										</article>
-									</div>
-									<!-- col-md-4 -->
-
-									<div class="col-md-4 col-sm-4 col-xs-12">
-										<span class="boxy-title"> <i class="fa fa-lightbulb-o pull-left" style="background-color: #ac3b67; width: 100%;"> <a href="#" style="padding: 12px; font: italic normal normal normal 28px/21px georgia;">NAAC
-													Accreditated with 'A' grade</a>
-										</i>
-										</span>
-										<article class="entry-item clearfix">
-
-											<div class="entry-content">
-
-												<p class="boxy-content">
-													We are accredited by NAAC with 'A' grade. <br> <br>
-													All of our academic departments are accredited by NBA under
-													new process.
-												</p>
-												<br> <a class="more-link clearfix" href="#" style="display: none"> <span class="pull-left">Read
-														more</span> <i class="fa fa-angle-right pull-left"></i>
-												</a>
-											</div>
-										</article>
-									</div>
-									<!-- col-md-4 -->
-
-								</div>
-								<!-- row -->
-
-							</div>
-							<!-- widget-content -->
-
-						</div>
-						<!-- widget -->
-
-					</div>
-					<!-- col-md-12 -->
-
+<div class="col">
+			<div>
+				<div class="text-center">
+					<h1><i style="font:italic;" class="text-light">Latest Notifications</i></h1>
+						<p class="text-secondary">We are constantly updating</p>
 				</div>
-				<!-- row -->
-
 			</div>
-			<!-- container -->
-		</section>
+</div>		
+<div class="container">
+<div class="row">
+  <div class="col">
+    <div class="card" style="width: 18rem; height:15rem;">
+      <div class="card-body">
+        <h5 class="card-title">Information Science</h5>
+        		<sql:setDataSource	var="myDS" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/finaldb" user="root" password="mysql" /> 
+    			<sql:query var="listEvents"   dataSource="${myDS}">
+        		select * from scraper ORDER BY id DESC LIMIT 1
+    			</sql:query>
+     			<div align="center">
+     			<p class="card-text">
+      				<c:forEach var="event" items="${listEvents.rows}">
+                		<c:out value="${event.subject}" />
+                		<c:out value="${event.event}" />
+                    	<c:out value="${event.date}" />
+            		</c:forEach></p>
+            	</div>	
+        <a href="notificationISE.jsp" class="btn btn-primary">See more</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+    <div class="card" style="width: 18rem; height:15rem;">
+      <div class="card-body">
+        <h5 class="card-title">Computer Science</h5>
+ 		        <sql:setDataSource	var="myDS" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/finaldb" user="root" password="mysql" /> 
+    			<sql:query var="listEvents"   dataSource="${myDS}">
+        		select * from scraper ORDER BY id DESC LIMIT 1
+    			</sql:query>
+     			<div align="center">
+     			<p class="card-text">
+      				<c:forEach var="event" items="${listEvents.rows}">
+                		<c:out value="${event.subject}" />
+                		<c:out value="${event.event}" />
+                    	<c:out value="${event.date}" />
+            		</c:forEach></p>
+            	</div>	
+        <a href="notificationISE.jsp" class="btn btn-primary">See more</a>
+      </div>
+    </div>
+   </div> 
+   
+  <div class="col">
+    <div class="card" style="width: 18rem; height:15rem;">
+      <div class="card-body">
+        <h5 class="card-title">Electronics and Communications</h5>
+ 		        <sql:setDataSource	var="myDS" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/finaldb" user="root" password="mysql" /> 
+    			<sql:query var="listEvents"   dataSource="${myDS}">
+        		select * from scraper ORDER BY id DESC LIMIT 1
+    			</sql:query>
+     			<div align="center">
+     			<p class="card-text">
+      				<c:forEach var="event" items="${listEvents.rows}">
+                		<c:out value="${event.subject}" />
+                		<c:out value="${event.event}" />
+                    	<c:out value="${event.date}" />
+            		</c:forEach></p>
+            	</div>	
+        <a href="notificationISE.jsp" class="btn btn-primary">See more</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+</section>
+
+
 </body>
 </html>
