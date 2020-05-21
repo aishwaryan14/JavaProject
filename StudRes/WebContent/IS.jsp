@@ -28,7 +28,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
- 
+
+        <link rel="stylesheet" href="jquery.rating.css">
+        <script src="jquery.js"></script>
+        <script src="jquery.rating.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
@@ -112,15 +115,36 @@
  <sql:setDataSource
         var="myDS"
         driver="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost:3306/finaldb"
+        url="jdbc:mysql://localhost:3306/java_demo"
         user="root" password="mysql"
     /> 
-    <sql:query var="listUsers"   dataSource="${myDS}">
+    
+   
+   
+    			
+       <sql:query var="listUsers"   dataSource="${myDS}">
+        SELECT * FROM final
+       </sql:query>
+       
+       <% String subject = request.getParameter("subject");
+       if( subject != null && subject.length() > 0 ) {%>
+    
+    
+     
+       <sql:query var="listUsers"   dataSource="${myDS}">
         SELECT * FROM final where subject = ? and semester = ?
         <sql:param value = "${param['subject']}" />
         <sql:param value = "${param['semester']}" />
+        
     </sql:query>
-     
+    
+    <% } %>
+   
+    
+   
+  
+    
+    
     <div align="center">
         <table border="1" cellpadding="5">
             <caption><h2>List of available materials</h2></caption>
@@ -131,6 +155,7 @@
                 <th>subject</th>
                 <th>description</th>
                 <th>pdf</th>
+                <th>Rating</th>
                 
             </tr>
             <c:forEach var="user" items="${listUsers.rows}">
@@ -141,12 +166,50 @@
                     <td><c:out value="${user.subject}" /></td>
                     <td><c:out value="${user.description}" /></td>
                     <td><form action="FileReadPdf"> <input type="hidden" name="bookId" value="${user.id}" /><input type="submit" value = "download"></form></td>
-                </tr>
+                    <td><c:out value="${user.Rating}" /></td>
+                    <td><form action="IS.jsp"> <input type="hidden" name="bookId" value="${user.id}" /><input type="radio" name="rating" value="1" class="star">
+            <input type="radio" name="rating" value="2" class="star">
+            <input type="radio" name="rating" value="3" class="star">
+            <input type="radio" name="rating" value="4" class="star">
+            <input type="radio" name="rating" value="5" class="star"><input type="submit" value = "Rate"></form></td>
+            </tr>
             </c:forEach>
         </table>
     </div>
 
-
+<sql:query var="rating"   dataSource="${myDS}">
+        		select * from final where id = ?
+        		<sql:param value="${param.bookId}" />
+    
+    
+    			</sql:query>
+    			
+    			
+   
+   <c:choose>	
+   
+  <c:when test="${not empty param.rating}">       
+  <c:forEach var="event" items="${rating.rows}">
+        <sql:update dataSource="${myDS}" var="newCitizen">
+        
+                		
+            		
+            UPDATE final SET rating= ? where id=?
+            <sql:param value="${(event.rating+param.rating)/2}" />
+            <sql:param value="${param.bookId}" />
+            
+            
+            
+            
+           
+        </sql:update>
+        </c:forEach>
+    </c:when>
+    <c:otherwise>
+        <font color="#cc0000">Please enter mandatory information.</font>
+    </c:otherwise>
+    </c:choose>
+    
  
 </body>
 </html>
