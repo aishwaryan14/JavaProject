@@ -65,11 +65,8 @@
 			<p>Send your comments through this form and we will get back to
 				you.</p>
 			<div id="message">
-<div class="container-fluid bg">  
-    <div class="row">  
-        <div class="col-md-4 col-sm-4 col-xs-12"></div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-				<form id="frmContact" name="frmContact" action="" method="POST"
+<div class="container-fluid">  
+    			<form id="frmContact" name="frmContact" action="" method="POST"
 					novalidate="novalidate" style="border: 1px solid black;
     				padding: 30px 40px;
     				background-color: white;
@@ -115,9 +112,6 @@
 				</div>
 				</div>
 			</div>
-		</div>
-		<!-- content -->
-	</div>
 	<!-- central -->
 </body>
 </html>
