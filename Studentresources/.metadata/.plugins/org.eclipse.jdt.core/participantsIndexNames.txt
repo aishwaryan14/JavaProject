@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\HOME\Desktop\JavaProject\Studentresources\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2021043145.index
-\FileUpload\src\main\java
-C:\Users\HOME\Desktop\JavaProject\Studentresources\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1914162269.index
-\FileUpload\src\main\java

@@ -21,7 +21,7 @@
         user="root" password="mysql"
     /> 
     <sql:query var="listEvents"   dataSource="${myDS}">
-        SELECT * FROM scraper where dept="ISE"
+        SELECT * FROM scraper where dept="ECE"
     </sql:query>
      
      <caption ><h1>List of all upcoming events</h1></caption> 

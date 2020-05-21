@@ -5,6 +5,7 @@
 <!DOCTYPE>
 <html> 
 <head>
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -53,7 +54,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="IS.jsp">ISE</a>
-          <a class="dropdown-item" href="#">CSE</a>
+          <a class="dropdown-item" href="CSE.jsp">CSE</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Common</a>
         </div>
@@ -101,7 +102,7 @@
     <div class="carousel-item active">
 	      <img class="d-block w-100" src="http://d2e9h3gjmozu47.cloudfront.net/Banner/banner.jpeg" style="height: 425px; opacity: .2;" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-		<h1 class="text-dark">Welcome to resources</h1>
+		<h1 class="text-dark">Welcome to our resources site</h1>
     	<p class="text-body">This is a common platform for all departments and semesters to share and use repositories containing all kinds of study materials.</p>
 	  </div>
     </div>    
@@ -143,23 +144,29 @@ text-align: center;">
 				</div>
 			</div>
 </div>		
-<div class="container">
+<div class="container" style="padding:40px 50px;">
 <div class="row">
   <div class="col">
     <div class="card" style="width: 18rem; height:15rem;">
-      <div class="card-body">
+      <div class="card-body" style="padding: 30px 40px;
+    				background-color: white;
+    				-webkit-box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);
+    				-moz-box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);
+    				box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);">
         <h5 class="card-title">Information Science</h5>
         		<sql:setDataSource	var="myDS" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/finaldb" user="root" password="mysql" /> 
     			<sql:query var="listEvents"   dataSource="${myDS}">
-        		select * from scraper ORDER BY id DESC LIMIT 1
+        		select * from scraper where dept="ISE" ORDER BY id DESC LIMIT 2
     			</sql:query>
      			<div align="center">
-     			<p class="card-text">
+      				<ul class="list-group list-group-flush">
       				<c:forEach var="event" items="${listEvents.rows}">
+      					<li class="list-group-item">
                 		<c:out value="${event.subject}" />
                 		<c:out value="${event.event}" />
-                    	<c:out value="${event.date}" />
-            		</c:forEach></p>
+                    	<c:out value="${event.date}" /></li>
+            		</c:forEach>
+            	 </ul>	
             	</div>	
         <a href="notificationISE.jsp" class="btn btn-primary">See more</a>
       </div>
@@ -168,42 +175,54 @@ text-align: center;">
   
   <div class="col">
     <div class="card" style="width: 18rem; height:15rem;">
-      <div class="card-body">
+      <div class="card-body" style="padding: 30px 40px;
+    				background-color: white;
+    				-webkit-box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);
+    				-moz-box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);
+    				box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);">
         <h5 class="card-title">Computer Science</h5>
  		        <sql:setDataSource	var="myDS" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/finaldb" user="root" password="mysql" /> 
     			<sql:query var="listEvents"   dataSource="${myDS}">
-        		select * from scraper ORDER BY id DESC LIMIT 1
+        		select * from scraper where dept="CSE" ORDER BY id DESC LIMIT 2
     			</sql:query>
      			<div align="center">
-     			<p class="card-text">
+      				<ul class="list-group list-group-flush">
       				<c:forEach var="event" items="${listEvents.rows}">
+      					<li class="list-group-item">
                 		<c:out value="${event.subject}" />
                 		<c:out value="${event.event}" />
-                    	<c:out value="${event.date}" />
-            		</c:forEach></p>
+                    	<c:out value="${event.date}" /></li>
+            		</c:forEach>
+            	 </ul>	
             	</div>	
-        <a href="notificationISE.jsp" class="btn btn-primary">See more</a>
+        <a href="notificationCSE.jsp" class="btn btn-primary">See more</a>
       </div>
     </div>
    </div> 
    
   <div class="col">
     <div class="card" style="width: 18rem; height:15rem;">
-      <div class="card-body">
+      <div class="card-body" style="padding: 30px 40px;
+    				background-color: white;
+    				-webkit-box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);
+    				-moz-box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);
+    				box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);">
         <h5 class="card-title">Electronics and Communications</h5>
  		        <sql:setDataSource	var="myDS" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/finaldb" user="root" password="mysql" /> 
     			<sql:query var="listEvents"   dataSource="${myDS}">
-        		select * from scraper ORDER BY id DESC LIMIT 1
+        		select * from scraper where dept="ECE" ORDER BY id DESC LIMIT 2
     			</sql:query>
      			<div align="center">
-     			<p class="card-text">
+     			 <ul class="list-group list-group-flush">
       				<c:forEach var="event" items="${listEvents.rows}">
+      					<li class="list-group-item">
                 		<c:out value="${event.subject}" />
                 		<c:out value="${event.event}" />
-                    	<c:out value="${event.date}" />
-            		</c:forEach></p>
+                    	<c:out value="${event.date}" /></li>
+            		</c:forEach>
+            	 </ul>	
             	</div>	
-        <a href="notificationISE.jsp" class="btn btn-primary">See more</a>
+        <a href="notificationECE.jsp" class="btn btn-primary">See more</a>
       </div>
     </div>
   </div>

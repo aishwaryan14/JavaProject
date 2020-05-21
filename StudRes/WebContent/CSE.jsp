@@ -69,10 +69,10 @@
 
 
  <div class="container col-lg-6" style="padding: 30px 40px;">
-  <h1 class="text-center">ISE</h1>
+  <h1 class="text-center">CSE</h1>
   <div class="card">
    <div class="card-body">
-    <form method="get" class="form-group" action="IS.jsp">
+    <form method="get" class="form-group" action="CSE.jsp">
      <div class="form-group">
      <div>
        <label>Subject</label>
@@ -117,7 +117,7 @@
    
     			
        <sql:query var="listUsers"   dataSource="${myDS}">
-        SELECT * FROM final where department="ISE" order by Rating DESC LIMIT 5
+        SELECT * FROM final where department="CSE" order by Rating DESC LIMIT 5
        </sql:query>
        
        <% String subject = request.getParameter("subject");
@@ -126,7 +126,7 @@
     
      
        <sql:query var="listUsers"   dataSource="${myDS}">
-        SELECT * FROM final where department="ISE" and subject = ? and semester = ?
+        SELECT * FROM final where department="CSE" and subject = ? and semester = ?
         <sql:param value = "${param['subject']}" />
         <sql:param value = "${param['semester']}" />
         
@@ -165,7 +165,7 @@
                     <td><c:out value="${user.description}" /></td>
                     <td><form action="FileReadPdf"> <input type="hidden" name="bookId" value="${user.id}" /><input type="submit" class="btn btn-primary" value = "download"></form></td>
                     <td><c:out value="${user.Rating}" /></td>
-                    <td><form action="IS.jsp" method="post"> <input type="hidden" name="bookId" value="${user.id}" />
+                    <td><form action="CSE.jsp" method="post"> <input type="hidden" name="bookId" value="${user.id}" />
                     	<input type="radio" name="rating" value="1" class="star">
             			<input type="radio" name="rating" value="2" class="star">
             			<input type="radio" name="rating" value="3" class="star">
