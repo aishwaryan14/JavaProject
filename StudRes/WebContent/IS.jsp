@@ -74,7 +74,9 @@
     </form>
   </div>
 </nav>
- <div class="container col-lg-6">
+
+
+ <div class="container col-lg-6" style="padding: 30px 40px;">
   <h1 class="text-center">ISE</h1>
   <div class="card">
    <div class="card-body">
@@ -115,7 +117,7 @@
  <sql:setDataSource
         var="myDS"
         driver="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost:3306/java_demo"
+        url="jdbc:mysql://localhost:3306/finaldb"
         user="root" password="mysql"
     /> 
     
@@ -123,7 +125,7 @@
    
     			
        <sql:query var="listUsers"   dataSource="${myDS}">
-        SELECT * FROM final
+        SELECT * FROM final order by Rating DESC LIMIT 5
        </sql:query>
        
        <% String subject = request.getParameter("subject");
@@ -145,11 +147,15 @@
   
     
     
-    <div align="center">
-        <table border="1" cellpadding="5">
+    <div align="center" style="padding: 30px 40px;
+    				background-color: white;
+    				-webkit-box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);
+    				-moz-box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);
+    				box-shadow: 10px 10px 15px 10px rgba(0.50,0.50,0.50,0.50);">
+        <table border="1" cellpadding="5" class="table table-bordered table-hover">
             <caption><h2>List of available materials</h2></caption>
+            <thead class="thead-dark">
             <tr>
-                <th>ID</th>
                 <th>department</th>
                 <th>semester</th>
                 <th>subject</th>
@@ -158,21 +164,23 @@
                 <th>Rating</th>
                 
             </tr>
+            </thead>
             <c:forEach var="user" items="${listUsers.rows}">
                 <tr>
-                    <td><c:out value="${user.id}" /></td>
                     <td><c:out value="${user.department}" /></td>
                     <td><c:out value="${user.semester}" /></td>
                     <td><c:out value="${user.subject}" /></td>
                     <td><c:out value="${user.description}" /></td>
                     <td><form action="FileReadPdf"> <input type="hidden" name="bookId" value="${user.id}" /><input type="submit" value = "download"></form></td>
                     <td><c:out value="${user.Rating}" /></td>
-                    <td><form action="IS.jsp"> <input type="hidden" name="bookId" value="${user.id}" /><input type="radio" name="rating" value="1" class="star">
-            <input type="radio" name="rating" value="2" class="star">
-            <input type="radio" name="rating" value="3" class="star">
-            <input type="radio" name="rating" value="4" class="star">
-            <input type="radio" name="rating" value="5" class="star"><input type="submit" value = "Rate"></form></td>
-            </tr>
+                    <td><form action="IS.jsp"> <input type="hidden" name="bookId" value="${user.id}" />
+                    	<input type="radio" name="rating" value="1" class="star">
+            			<input type="radio" name="rating" value="2" class="star">
+            			<input type="radio" name="rating" value="3" class="star">
+            			<input type="radio" name="rating" value="4" class="star">
+            			<input type="radio" name="rating" value="5" class="star">
+            		<input type="submit" value = "Rate"></form></td>
+            	</tr>
             </c:forEach>
         </table>
     </div>
@@ -190,7 +198,7 @@
    
   <c:when test="${not empty param.rating}">       
   <c:forEach var="event" items="${rating.rows}">
-        <sql:update dataSource="${myDS}" var="newCitizen">
+        <sql:update dataSource="${myDS}">
         
                 		
             		
