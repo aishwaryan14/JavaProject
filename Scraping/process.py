@@ -111,7 +111,7 @@ for i in b:
 
 print(a)
 
-sql = "INSERT INTO scraper (subject,event,date) VALUES (%s, %s, %s)"
+sql = "INSERT INTO scraper (subject,event,date,dept) VALUES (%s, %s, %s,'ISE')"
 
 
 

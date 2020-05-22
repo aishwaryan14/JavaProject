@@ -5,14 +5,14 @@ import time
 from selenium.webdriver.common.keys import Keys
 import pickle
 from selenium.common.exceptions import NoSuchElementException
-
+from webdriver_manager.chrome import ChromeDriverManager
 
 path="C:\\Users\\HOME\\Downloads\\chromedriver_win32\\chromedriver.exe"
-driver=webdriver.Chrome(path)
-
+# driver=webdriver.Chrome(path)
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('https://web.whatsapp.com/')
 
-LAST_MESSAGES = 10
+LAST_MESSAGES = 5
 extracted  = []
 top_messages = []
 message_dic = {}
@@ -44,7 +44,7 @@ user.click()
 ho = driver.find_element_by_tag_name('body')
 ho.click()
 
-for i in range(1):
+for i in range(5):
     driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
     time.sleep(4)            
 chats()

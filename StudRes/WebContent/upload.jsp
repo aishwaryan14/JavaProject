@@ -67,7 +67,18 @@
   		 					<option value="8">8</option>
 	    				</select></div>
        					<div><label>Subject</label>
-       					<input type="text" name="subject"/></div>
+       					 <select class="browser-default custom-select" name="subject">
+  		 					<option selected>Choose subject</option>
+  		 					<option value="J2EE">J2EE</option>
+  		 					<option value="JAVA">JAVA</option>
+  		 					<option value="OOADP">OOADP</option>
+  		 					<option value="ML">ML</option>
+  		 					<option value="IPR">IPR</option>
+  		 					<option value="OS">OS</option>
+  		 					<option value="DAA">DAA</option>
+  		 					<option value="FAFL">FAFL</option>
+  		 					<option label="IPR">IPR</option>
+  						</select>
        					<div><label>Description</label>
        					<input type="text" name="description"/></div>
      					</div>
