@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>This project has been developed as a part of Advanced Java and J2EE course.</p>
+  <p>We are students from 6th semester, Information Science and Engineering at Ramaiah Institute of Technology.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Sai Viswa</h2>
+        <p class="title">Web Developer</p>
+        <p>Working on finding the cure for Cancer.</p>
+        <p>saiviswa124@gmail.com</p>
+        <p><form action="https://www.github.com/SaiViswaSumanth">
+    <input class ="button" type="submit" value="See Profile" />
+</form></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Aishwarya N</h2>
+        <p class="title">Student at Ramaiah Institute of Technology</p>
+        <p> </p>
+       
+
+        <p> aishwarya.nagaraj14@gmail.com</p>
+        <p><form action="https://github.com/aishwaryan14">
+    <input class ="button" type="submit" value="See Profile" />
+</form></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Ujwal Karippali</h2>
+        <p class="title">Student at Ramaiah Institute of Technology</p>
+        <p>An Aspiring Engineer.</p>
+        <a href ="https://www.linkedin.com/in/ujwal-karippali-748111169/">Contact Me</a>
+        <p><form action="https://www.github.com/ujwalkpl">
+    <input class ="button" type="submit" value="See Profile" />
+</form></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
