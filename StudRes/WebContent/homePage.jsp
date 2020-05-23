@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
   <!-- <a class="navbar-brand" href="#">MSRIT Student Resources</a>-->
   <a class="navbar-brand" href="#">
-    <img src="http://d2e9h3gjmozu47.cloudfront.net/brand.png" width="100" height="50" alt="">
+    <img src="" width="100" height="50" alt="">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -100,14 +100,14 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-	      <img class="d-block w-100" src="http://d2e9h3gjmozu47.cloudfront.net/Banner/banner.jpeg" style="height: 425px; opacity: .2;" alt="First slide">
+	      <img class="d-block w-100" src="" style="height: 425px; opacity: .2;" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
 		<h1 class="text-dark">Welcome to our resources site</h1>
     	<p class="text-body">This is a common platform for all departments and semesters to share and use repositories containing all kinds of study materials.</p>
 	  </div>
     </div>    
     <div class="carousel-item">
-      	<img class="d-block w-100" src="http://res.cloudinary.com/weloft/image/upload/c_scale,h_750/v1483774741/dept-sliders/ise.jpg" style="height: 425px;  opacity: .2;" alt="Second slide">
+      	<img class="d-block w-100" src="" style="height: 425px;  opacity: .2;" alt="Second slide">
       <div class="carousel-caption d-none d-md-block">
 	    <h1 class="text-dark">Contact us</h1>
     	<p class="text-body ">Request materials by contacting us.</p>
@@ -115,7 +115,7 @@
 	  </div>
     </div>
     <div class="carousel-item">
-    	  <img class="d-block w-100" src="https://d2e9h3gjmozu47.cloudfront.net/Banner/ramaiah-our-logo-featured.jpg" style="height: 425px; opacity: .2" alt="Third slide">
+    	  <img class="d-block w-100" src="" style="height: 425px; opacity: .2" alt="Third slide">
       <div class="carousel-caption d-none d-md-block">
 	    <h1 class="text-dark">Login as admin</h1>
     	<p class="text-body ">Login as admin and upload materials.</p>

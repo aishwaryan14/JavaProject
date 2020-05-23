@@ -32,7 +32,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
   <a class="navbar-brand" href="#">
-    <img src="http://d2e9h3gjmozu47.cloudfront.net/brand.png" width="100" height="50" alt="">
+    <img src="" width="100" height="50" alt="">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
